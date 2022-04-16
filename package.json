@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/HugoAloche/PIIQUANTE/issues"
   },
-  "homepage": "https://github.com/HugoAloche/PIIQUANTE#readme"
+  "homepage": "https://github.com/HugoAloche/PIIQUANTE#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
