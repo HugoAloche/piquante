@@ -19,7 +19,7 @@ app.use(express.json());
 
 app.use('/api/auth/signup', signupRoutes);
 app.use('/api/auth/login', loginRoutes);
-app.use('/api/auth/sauces', saucesRoutes);
+app.use('/api/sauces', saucesRoutes);
 
 // app.get('/api/auth/signup:id', (req, res, next) => {
 //     Utilisateur.findOne({

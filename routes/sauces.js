@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const Sauce = require('../models/Sauce');
+const saucesCtrl = require('../controllers/sauces.js');
 
-router.get('/api/sauces', (req, res, next) => {})
+router.get('/', saucesCtrl.createsSauces)
 
 module.exports = router;
