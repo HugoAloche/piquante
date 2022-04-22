@@ -1,4 +1,5 @@
 const Utilisateur = require('../models/Utilisateur');
+const jwt = require('jsonwebtoken');
 
 exports.connectProfile = (req, res, next) => {
     let user = false;
