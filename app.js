@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path')
+
 const userRoutes = require('./routes/user.js');
 const saucesRoutes = require('./routes/sauces.js');
 
@@ -16,19 +18,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/auth', userRoutes);
-app.use('/api/sauces', saucesRoutes);
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
-// app.get('/api/auth/signup:id', (req, res, next) => {
-//     Utilisateur.findOne({
-//             _id: req.params.id
-//         })
-//         .then(utilisateur => {
-//             res.status(200).json(utilisateur);
-//         })
-//         .catch(error => {
-//             res.status(400).json({ error: error })
-//         })
-// })
+app.use('/api/sauces', saucesRoutes);
+app.use('/api/auth', userRoutes);
 
 module.exports = app;
