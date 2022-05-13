@@ -1,5 +1,5 @@
 const express = require('express');
-const multer = require('../images/multer-config.js');
+const multer = require('../middleware/multer-config.js');
 const router = express.Router();
 
 const saucesCtrl = require('../controllers/sauces.js');
